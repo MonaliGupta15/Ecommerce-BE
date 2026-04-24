@@ -13,8 +13,6 @@ const addressRoutes = require("./routes/AddressRouter");
 
 const app = express();
 
-// ✅ FIX 1: removed trailing slash from frontend URL
-// ✅ FIX 2: added app.options for preflight
 app.use(
   cors({
     origin: [
