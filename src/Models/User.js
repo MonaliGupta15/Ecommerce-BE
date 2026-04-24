@@ -54,14 +54,27 @@ const userSchema = new mongoose.Schema(
 
     cart: [
       {
-        product:{
+        product: {
           type: mongoose.Schema.Types.ObjectId,
-          ref:"Product"
+          ref: "Product"
         },
-        quantity:{
+        quantity: {
           type: Number,
-          default:1
+          default: 1
         }
+      }
+    ],
+
+    // ✅ NEW: addresses array
+    addresses: [
+      {
+        fullName:  { type: String, required: true },
+        mobile:    { type: String, required: true },
+        pincode:   { type: String, required: true },
+        street:    { type: String, required: true },
+        city:      { type: String, required: true },
+        state:     { type: String, required: true },
+        isDefault: { type: Boolean, default: false }
       }
     ]
   },
@@ -70,4 +83,4 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.models.User || mongoose.model("User", userSchema)
+module.exports = mongoose.models.User || mongoose.model("User", userSchema);

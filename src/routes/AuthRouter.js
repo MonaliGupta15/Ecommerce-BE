@@ -89,7 +89,7 @@ router.post("/login", async (req, res) => {
       .cookie("loginToken", token, {
         httpOnly: true,
         maxAge: 24 * 60 * 60 * 1000,
-        sameSite: "strict"
+        sameSite: "lax"
       })
       .status(200)
       .json({
@@ -116,7 +116,7 @@ router.post("/logout", (req, res) => {
   res
     .clearCookie("loginToken", {
       httpOnly: true,
-      sameSite: "strict"
+      sameSite: "Lax"
     })
     .status(200)
     .json({
@@ -126,3 +126,4 @@ router.post("/logout", (req, res) => {
 });
 
 module.exports = router;
+//intersection ResizeObserver, callback, threshold, //card component with two things add of cart and qauntity//cart numbering

@@ -4,6 +4,8 @@ const User = require("../Models/User")
 
 const isLoggedIn = async (req, res, next) => {
   try {
+       console.log("ALL COOKIES:", req.cookies); // ← add this
+
     const { loginToken } = req.cookies
 
     if (!loginToken) {

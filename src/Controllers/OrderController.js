@@ -7,9 +7,7 @@ const checkout = async (req, res) => {
     const user = req.user;
 
     if (!user.cart || user.cart.length === 0) {
-      return res.status(400).json({
-        message: "Cart is empty"
-      });
+      return res.status(400).json({ message: "Cart is empty" });
     }
 
     let totalAmount = 0;
@@ -17,11 +15,8 @@ const checkout = async (req, res) => {
     for (let item of user.cart) {
       const product = await Product.findById(item.product);
       if (!product) {
-        return res.status(400).json({
-          message: "Product not found during checkout"
-        });
+        return res.status(400).json({ message: "Product not found during checkout" });
       }
-
       totalAmount += product.price * item.quantity;
     }
 
@@ -33,7 +28,6 @@ const checkout = async (req, res) => {
 
     await order.save();
 
-    // Clear cart
     user.cart = [];
     await user.save();
 
@@ -44,12 +38,24 @@ const checkout = async (req, res) => {
     });
 
   } catch (error) {
-    res.status(500).json({
-      error: error.message
-    });
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// ✅ GET ALL ORDERS FOR LOGGED IN USER
+const getOrders = async (req, res) => {
+  try {
+    const orders = await Order.find({ user: req.user._id })
+      .populate("items.product")
+      .sort({ createdAt: -1 }); // newest first
+
+    res.json({ success: true, orders });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 };
 
 module.exports = {
-  checkout
+  checkout,
+  getOrders
 };
