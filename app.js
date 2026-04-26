@@ -13,6 +13,16 @@ const addressRoutes  = require("./routes/AddressRouter");
 
 const app = express();
 
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://ecommerce-frontend-cyan-ten.vercel.app");
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type,Authorization");
+  if (req.method === "OPTIONS") return res.sendStatus(200);
+  next();
+});
+
 app.use(cors({
   origin: [
     "http://localhost:5173",
