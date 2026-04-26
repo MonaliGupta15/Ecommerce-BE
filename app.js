@@ -23,7 +23,7 @@ app.use(
     credentials: true
   })
 );
-app.options("*", cors()); 
+// app.options("*", cors()); 
 
 app.use(cookieParser());
 app.use(express.json());
@@ -39,6 +39,10 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("DB Connected Successfully");
+    
+    app.listen(process.env.PORT || 8080, () => {
+    console.log("Server running on:", process.env.PORT || 8080);
+     })
   })
   .catch((error) => {
     console.log("DB Connection Failed", error.message);
