@@ -13,27 +13,31 @@ const addressRoutes  = require("./routes/AddressRouter");
 
 const app = express();
 
+const corsOptions = {
+  origin: function(origin, callback) {
+    const allowed = [
+      "http://localhost:5173",
+      "http://localhost:5174",
+      "https://ecommerce-frontend-cyan-ten.vercel.app"
+    ];
+    if (!origin || allowed.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+};
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://ecommerce-frontend-cyan-ten.vercel.app");
-  res.header("Access-Control-Allow-Credentials", "true");
-  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type,Authorization");
-  if (req.method === "OPTIONS") return res.sendStatus(200);
-  next();
-});
-
-app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "https://ecommerce-frontend-cyan-ten.vercel.app"
-  ],
-  credentials: true
-}));
-
+app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(express.json());
+
+app.get("/health", (req, res) => {
+  res.json({ status: "ok" });
+});
 
 app.use("/api/products",  productRoutes);
 app.use("/api/auth",      authRoutes);
