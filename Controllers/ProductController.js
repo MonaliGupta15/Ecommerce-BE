@@ -19,10 +19,26 @@ const createProduct = async (req, res) => {
   }
 };
 
+const defaultProducts = require("../default_products.json");
+
 // READ ALL PRODUCTS
 const getProducts = async (req, res) => {
   try {
-    const products = await Product.find();
+    let products = await Product.find();
+
+    // Auto-replenish: If products count drops below 32 (even down to 8),
+    // automatically restore any missing products on the next visit so it always stays at 32 products!
+    if (products.length < defaultProducts.length) {
+      const existingNames = new Set(products.map((p) => p.name));
+      const missingProducts = defaultProducts.filter(
+        (p) => !existingNames.has(p.name)
+      );
+
+      if (missingProducts.length > 0) {
+        await Product.insertMany(missingProducts);
+        products = await Product.find();
+      }
+    }
 
     res.json({
       success: true,
@@ -40,6 +56,15 @@ const getProducts = async (req, res) => {
 // DELETE PRODUCT
 const deleteProduct = async (req, res) => {
   try {
+    // Demo protection: pause deletion if catalog drops to 8 or fewer items
+    const totalCount = await Product.countDocuments();
+    if (totalCount <= 8) {
+      return res.status(403).json({
+        success: false,
+        message: "Demo Protection: Deletion paused at 8 items. Simply refresh the page to restore all 32 products!"
+      });
+    }
+
     await Product.findByIdAndDelete(req.params.id);
     res.json({
       success: true,

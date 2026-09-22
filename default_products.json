@@ -1,0 +1,264 @@
+[
+  {
+    "name": "Apple iPhone 15",
+    "price": 79999,
+    "description": "Latest Apple smartphone with A16 Bionic chip and 48MP camera",
+    "quantity": 10,
+    "image": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400",
+    "category": "electronics"
+  },
+  {
+    "name": "Samsung Galaxy S23",
+    "price": 54999,
+    "description": "Samsung flagship phone with 200MP camera and Snapdragon 8 Gen 2",
+    "quantity": 15,
+    "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400",
+    "category": "electronics"
+  },
+  {
+    "name": "Sony WH-1000XM5 Headphones",
+    "price": 24999,
+    "description": "Industry leading noise cancelling wireless headphones",
+    "quantity": 20,
+    "image": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=400",
+    "category": "electronics"
+  },
+  {
+    "name": "LG 43 inch Smart TV",
+    "price": 38999,
+    "description": "4K UHD Smart TV with WebOS and built-in Alexa",
+    "quantity": 8,
+    "image": "https://images.unsplash.com/photo-1461151304267-38535e780c79?w=400\n",
+    "category": "electronics"
+  },
+  {
+    "name": "Dell Inspiron Laptop",
+    "price": 52999,
+    "description": "Intel Core i5, 8GB RAM, 512GB SSD, 15.6 inch FHD display",
+    "quantity": 12,
+    "image": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400",
+    "category": "electronics"
+  },
+  {
+    "name": "Apple iPad Air",
+    "price": 59999,
+    "description": "10.9 inch Liquid Retina display, M1 chip, 64GB storage",
+    "quantity": 9,
+    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400",
+    "category": "electronics"
+  },
+  {
+    "name": "Canon EOS R50 Camera",
+    "price": 64999,
+    "description": "24.2MP mirrorless camera with 4K video and dual pixel autofocus",
+    "quantity": 6,
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400",
+    "category": "electronics"
+  },
+  {
+    "name": "Fitbit Charge 6",
+    "price": 12999,
+    "description": "Advanced fitness tracker with heart rate, GPS and sleep tracking",
+    "quantity": 25,
+    "image": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400",
+    "category": "electronics"
+  },
+  {
+    "name": "JBL Flip 6 Speaker",
+    "price": 8999,
+    "description": "Portable waterproof Bluetooth speaker with 12 hours battery",
+    "quantity": 30,
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400",
+    "category": "electronics"
+  },
+  {
+    "name": "Mi Robot Vacuum Cleaner",
+    "price": 19999,
+    "description": "Smart robotic vacuum with auto mapping and app control",
+    "quantity": 7,
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
+    "category": "electronics"
+  },
+  {
+    "name": "Basmati Rice 5kg",
+    "price": 450,
+    "description": "Premium aged long grain basmati rice from Punjab",
+    "quantity": 100,
+    "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400",
+    "category": "grocery"
+  },
+  {
+    "name": "Organic Green Tea 100g",
+    "price": 299,
+    "description": "100% natural organic green tea leaves with antioxidants",
+    "quantity": 80,
+    "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400",
+    "category": "grocery"
+  },
+  {
+    "name": "Cornflakes 500g",
+    "price": 180,
+    "description": "Crispy breakfast cereal made from whole grain corn",
+    "quantity": 60,
+    "image": "https://images.unsplash.com/photo-1521483451569-e33803c0330c?w=400",
+    "category": "grocery"
+  },
+  {
+    "name": "Cold Pressed Olive Oil 1L",
+    "price": 850,
+    "description": "Extra virgin cold pressed olive oil for cooking and salads",
+    "quantity": 45,
+    "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400",
+    "category": "grocery"
+  },
+  {
+    "name": "Almonds 500g",
+    "price": 550,
+    "description": "Premium California almonds, raw and unsalted",
+    "quantity": 70,
+    "image": "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=400",
+    "category": "grocery"
+  },
+  {
+    "name": "Whole Wheat Bread",
+    "price": 55,
+    "description": "Freshly baked 100% whole wheat bread, 400g loaf",
+    "quantity": 50,
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400",
+    "category": "grocery"
+  },
+  {
+    "name": "Organic Honey 500g",
+    "price": 399,
+    "description": "Pure raw organic honey sourced from Himalayan beehives",
+    "quantity": 55,
+    "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400",
+    "category": "grocery"
+  },
+  {
+    "name": "Amul Full Cream Milk 1L",
+    "price": 68,
+    "description": "Fresh full cream milk, rich in calcium and protein",
+    "quantity": 120,
+    "image": "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400",
+    "category": "grocery"
+  },
+  {
+    "name": "Dark Chocolate 100g",
+    "price": 199,
+    "description": "72% cocoa Belgian dark chocolate bar",
+    "quantity": 90,
+    "image": "https://images.unsplash.com/photo-1511381939415-e44015466834?w=400",
+    "category": "grocery"
+  },
+  {
+    "name": "Mixed Fruit Jam 500g",
+    "price": 149,
+    "description": "No preservatives mixed fruit jam made from fresh fruits",
+    "quantity": 65,
+    "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400",
+    "category": "grocery"
+  },
+  {
+    "name": "Men's Round Neck T-Shirt",
+    "price": 599,
+    "description": "100% cotton comfortable round neck t-shirt, available in all sizes",
+    "quantity": 200,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400",
+    "category": "fashion"
+  },
+  {
+    "name": "Women's Floral Kurti",
+    "price": 899,
+    "description": "Elegant floral printed cotton kurti for casual and semi-formal wear",
+    "quantity": 150,
+    "image": "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?w=400",
+    "category": "fashion"
+  },
+  {
+    "name": "Men's Slim Fit Jeans",
+    "price": 1299,
+    "description": "Stretchable slim fit denim jeans in dark blue wash",
+    "quantity": 120,
+    "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400",
+    "category": "fashion"
+  },
+  {
+    "name": "Women's Running Shoes",
+    "price": 2499,
+    "description": "Lightweight breathable running shoes with cushioned sole",
+    "quantity": 80,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
+    "category": "fashion"
+  },
+  {
+    "name": "Men's Formal Shirt",
+    "price": 1099,
+    "description": "Wrinkle-free slim fit formal shirt for office and events",
+    "quantity": 100,
+    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400",
+    "category": "fashion"
+  },
+  {
+    "name": "Women's Handbag",
+    "price": 1799,
+    "description": "Stylish faux leather handbag with multiple compartments",
+    "quantity": 60,
+    "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400",
+    "category": "fashion"
+  },
+  {
+    "name": "Men's Sports Jacket",
+    "price": 2199,
+    "description": "Lightweight windproof sports jacket for outdoor activities",
+    "quantity": 45,
+    "image": "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=400",
+    "category": "fashion"
+  },
+  {
+    "name": "Women's Sunglasses",
+    "price": 999,
+    "description": "UV400 polarized sunglasses with cat eye frame",
+    "quantity": 75,
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400",
+    "category": "fashion"
+  },
+  {
+    "name": "Men's Leather Wallet",
+    "price": 799,
+    "description": "Genuine leather bifold wallet with RFID blocking",
+    "quantity": 90,
+    "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=400",
+    "category": "fashion"
+  },
+  {
+    "name": "Women's Yoga Pants",
+    "price": 1199,
+    "description": "High waist stretchable yoga pants with phone pocket",
+    "quantity": 110,
+    "image": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400",
+    "category": "fashion"
+  },
+  {
+    "name": "Dell Laptop",
+    "price": 40900,
+    "description": "dell laptop",
+    "quantity": 20,
+    "image": "https://picsum.photos/seed/phone/400/300",
+    "category": "electronics",
+    "createdAt": "2026-04-24T09:22:17.987Z",
+    "updatedAt": "2026-04-24T09:22:17.987Z",
+    "__v": 0
+  },
+  {
+    "name": "Apple Iphone 17 pro 256GB",
+    "price": 158000,
+    "description": "Introducing iPhone 17 Pro\nFeaturing a sleek heat-forged aluminum unibody, a vibrant 6.3-inch ProMotion display, and a powerful triple 48MP camera system with up to 8x optical-quality zoom. Powered by the A19 Pro chip with advanced cooling, it handles everything from 4K Dolby Vision video to intensive gaming with ease. With all-day battery life, fast charging, and smart Apple Intelligence features like Clean Up and Genmoji, it’s compact pro power in your pocket.",
+    "quantity": 100,
+    "image": "https://shop.vodafone.qa/media/catalog/product/i/p/iphone_17_pro_cosmic_orange_p1.webp?auto=webp&format=pjpg&width=2560&height=3200&fit=cover",
+    "category": "electronics",
+    "createdAt": "2026-05-07T18:35:42.814Z",
+    "updatedAt": "2026-05-07T18:35:42.814Z",
+    "__v": 0
+  }
+]
