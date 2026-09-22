@@ -17,7 +17,8 @@ router.post("/", isLoggedIn, isSeller, createProduct);
 router.patch("/:id", isLoggedIn, isSeller, editProduct);
 router.delete("/:id", isLoggedIn, isSeller, deleteProduct);
 
-// BUYER ROUTE
-router.get("/", isLoggedIn, isBuyer, getProducts);
+// ALL USERS (BUYER, SELLER, GUEST) CAN VIEW PRODUCTS
+router.get("/", getProducts);
 
 module.exports = router;
+

@@ -83,13 +83,15 @@ router.post("/login", async (req, res) => {
       { expiresIn: process.env.JWT_EXPIRES_IN || "1d" }
     );
 
+    const isProduction = process.env.NODE_ENV === "production";
+
     // ✅ STORE TOKEN IN COOKIE
     res
       .cookie("loginToken", token, {
         httpOnly: true,
         maxAge: 24 * 60 * 60 * 1000,
-        sameSite: "None",
-        secure: true
+        sameSite: isProduction ? "none" : "lax",
+        secure: isProduction
       })
       .status(200)
       .json({
@@ -98,7 +100,8 @@ router.post("/login", async (req, res) => {
         data: {
           id: user._id,
           username: user.username,
-          role: user.role
+          role: user.role,
+          token: token
         }
       });
 
@@ -113,11 +116,12 @@ router.post("/login", async (req, res) => {
 
 // ================= LOGOUT =================
 router.post("/logout", (req, res) => {
+  const isProduction = process.env.NODE_ENV === "production";
   res
     .clearCookie("loginToken", {
       httpOnly: true,
-      sameSite: "None",
-      secure: true
+      sameSite: isProduction ? "none" : "lax",
+      secure: isProduction
     })
     .status(200)
     .json({
